@@ -16,6 +16,7 @@ label ruins:
 
     # 233333
     #test
+    # 2333333333333
     # awa
     # Fuckyou Russia
     pause 2.0
