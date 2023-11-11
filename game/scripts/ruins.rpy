@@ -13,9 +13,9 @@ label ruins:
     play music "audio/bgm/潮鳴り.mp3"
     # awaqwqawaqwq
     # how are you
-    
+
     # 233333
-    
+    #test
     # Fuckyou Russia
     pause 2.0
     scene bg ruins1 at img_wandering with dissolve
