@@ -7,7 +7,6 @@ style ct_text_style:
 
 
 init python:
-    global ct_timer
     def ct_text_func(st, a):
         # st -= 0.5
         if st <= 0: #init
@@ -20,5 +19,6 @@ init python:
                 
         
 
+
 image ct_text = DynamicDisplayable(ct_text_func)
-image ct_text_bottom = DynamicDisplayable(ct_text_func)
+# image ct_text_bottom = DynamicDisplayable(ct_text_func)

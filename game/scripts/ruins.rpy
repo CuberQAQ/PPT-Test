@@ -6,6 +6,12 @@ define teacher = Character("Miss You", kind = nvl, who_suffix="\n老师")
 define sister = Character("Sister", kind = nvl, who_suffix="\n姐姐")
 define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥哥")
 
+style bottom_text:
+    xalign 0.5
+    yalign 0.57
+    size 50
+    outlines [(3, "#000000a0", 0, 0)]
+image bottom_text = Text("这是个什么世界？", style="bottom_text")
 
 # 游戏在此开始。
 label ruins:
@@ -44,7 +50,10 @@ label ruins:
     scene bg ruins5 at img_wandering with dissolve
 
     pause
-    return
+    call show_black_trans("この世界は何ですか?")
+    # pause 0.1
+    show bottom_text onlayer black_trans_layer with Dissolve(1.4)
+    jump qiaolang
 
     # show ct_text at truecenter with dissolve 
     # call show_black_trans("Chapter 1  Home   巴以冲突中的一家") from _call_show_black_trans
