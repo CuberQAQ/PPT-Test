@@ -636,7 +636,7 @@ screen save():
 
     use file_slots(_("保存"))
 
-
+ 
 screen load():
 
     tag menu
