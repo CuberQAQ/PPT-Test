@@ -50,7 +50,7 @@ label ruins:
     scene bg ruins5 at img_wandering with dissolve
 
     pause
-    call show_black_trans("この世界は何ですか?")
+    call show_black_trans("ここはどんな世界ですか？", False)
     # pause 0.1
     show bottom_text onlayer black_trans_layer with Dissolve(1.4)
     jump qiaolang

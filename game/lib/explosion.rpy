@@ -6,10 +6,11 @@ label explosion:
     # 炸弹爆炸 开始
     play sound "audio/sfx/missile-fly-by-2.mp3"
     pause 2.9
-    show white_bgg_2:
+    show white_bg_2:
         alpha 1.0
         time 0.08
         alpha 0.0
+        pause 0.1
     show black_bg_2 at Transform:
         alpha 0.2
         ease 0.05 alpha 1
@@ -24,12 +25,17 @@ label explosion:
     with None
     pause 1.0
     hide white_bg_2
-    show snow onlayer particle
+    show snow onlayer particle at Transform:
+        alpha 1.0
+        time 4.0
+        linear 4.0 alpha 0.0
     show black_bg_2 at Transform:
         alpha 1.0
         easein 8 alpha 0.75
     pause 2.0
     stop music fadeout 4.0
-    hide snow onlayer particle with dissolve
+    # show snow onlayer particle at Transform :
+    #     alpha 1.0
+    #     linear 4 alpha 0.0
     # 炸弹爆炸 结束
     return
