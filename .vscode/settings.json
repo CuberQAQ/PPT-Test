@@ -5,5 +5,5 @@
     "**/*.rpymc": true,
     "**/cache/": true
   },
-  "gitdoc.enabled": true
+  "gitdoc.enabled": false
 }
