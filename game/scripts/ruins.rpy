@@ -24,7 +24,7 @@ label ruins:
 
     narrator """He suppressed his emotions and, with a glimmer of hope, searched for his loved ones amidst the ruins of the hospital.Finally, he found his sister, barely clinging to life. 
 \n\n他强忍住情绪，怀着一丝侥幸的心理，在医院的废墟中翻找他的亲人。他终于发现姐姐，姐姐奄奄一息。"""
-
+    
     nvl clear
 
     scene bg ruins3 at img_wandering with dissolve
