@@ -15,7 +15,6 @@ label ruins:
     # how are you
     
     # 233333
-
     
     # Fuckyou Russia
     pause 2.0
