@@ -16,6 +16,7 @@ label ruins:
 
     # 233333
     #test
+    # awa
     # Fuckyou Russia
     pause 2.0
     scene bg ruins1 at img_wandering with dissolve
