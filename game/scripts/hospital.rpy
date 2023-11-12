@@ -1,7 +1,7 @@
 ﻿# 游戏的脚本可置于此文件中。
 
 # 声明此游戏使用的角色。颜色参数可使角色姓名着色。
-
+define config.layers += ["flare"]
 define teacher = Character("Miss You", kind = nvl, who_suffix="\n老师")
 define sister = Character("Sister", kind = nvl, who_suffix="\n姐姐")
 define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥哥")
@@ -9,8 +9,10 @@ define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥�
 
 # 游戏在此开始。
 label hospital:
-
+    play music "audio/bgm/卒業.mp3"
     scene bg hospital2_1 at img_wandering with dissolve
+    scene flare_mask onlayer flare
+
     call hide_black_trans()
 
     narrator """Meanwhile, inside the hospital, nurses were bandaging other injured patients while the older brother went out to search for supplies.
@@ -58,7 +60,10 @@ label hospital:
 \n\n即使风雨再大，这一簇烛火也会燃烧下去。"""
 
     nvl clear
-
+    play music "audio/sfx/air_defense_warning.mp3" volume 0.4
+    pause
+    stop music fadeout 20.0
+    
 
     call explosion
 

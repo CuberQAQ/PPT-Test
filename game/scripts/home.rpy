@@ -1,9 +1,15 @@
-
+# $ renpy.("flare")
 define sister = Character("Sister", kind = nvl, who_suffix="\n姐姐")
 define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥哥")
 define little_brother = Character("Little Brother", kind = nvl, who_suffix="\n弟弟")
 
-image snow = SnowBlossom("particle/fire.png", count=6000, yspeed=(-1600, -1400), xspeed=(-350,350))
+image snow = SnowBlossom("particle/fire.png", count=600, yspeed=(-3200, -2800), xspeed=(-700,700))
+
+transform alpha_in:
+    zoom 1.0
+    alpha 0.0
+    # time 1.0
+    easeout 2 alpha 0.8
 
 label home:
 
@@ -39,17 +45,25 @@ label home:
     stop music
     play music "audio/sfx/air_defense_warning.mp3" volume 0.4
     pause
+    stop music fadeout 20.0
+    
+    scene bg home at Transform:
+        time 3.0
+        matrixcolor SaturationMatrix(0.0)
     call explosion
 
-    narrator """The bomb hit the home!
-炸弹袭击了这个家!"""
-    # $ ct_text_t = "The bomb hit the home!\n炸弹袭击了这个家!"
-    # show ct_text
+#     narrator """The bomb hit the home!
+# 炸弹袭击了这个家!"""
+    $ ct_text_t = "The bomb hit the home\n      炸弹袭击了这个家"
+    show ct_text onlayer on_explosion at alpha_in, Transform:
+        time 1.0
+        easein 6 zoom 0.8
     
 
-    nvl clear
+    # nvl clear
 
     pause
+    hide ct_text onlayer on_explosion with dissolve
     stop sound
     call show_black_trans("Chapter 2  Hospital   医院")
     jump hospital

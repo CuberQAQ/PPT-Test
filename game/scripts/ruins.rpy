@@ -6,11 +6,16 @@ define teacher = Character("Miss You", kind = nvl, who_suffix="\n老师")
 define sister = Character("Sister", kind = nvl, who_suffix="\n姐姐")
 define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥哥")
 
+image black_bg = Solid("#000")
+
 style bottom_text:
     xalign 0.5
     yalign 0.57
     size 50
     outlines [(3, "#000000a0", 0, 0)]
+
+style ct_text_add:
+    font "GenEiKoburiMin6-R.ttf"
 image bottom_text = Text("这是个什么世界？", style="bottom_text")
 
 # 游戏在此开始。
@@ -18,29 +23,32 @@ label ruins:
 
     play music "audio/bgm/潮鳴り.mp3"
     pause 2.0
-    scene bg ruins1 at img_wandering with dissolve
+    scene bg ruins1 at blood_gray_red, img_wandering with dissolve
     call hide_black_trans()
+
+    with None
+
 
     narrator """As the smoke cleared, the brother held onto supplies and carried a candle.
 \n\n硝烟散去，哥哥抱着物资，拿着烛火。"""
 
     nvl clear
 
-    scene bg ruins2 at img_wandering with dissolve
+    scene bg ruins2 at blood_gray_red, img_wandering with dissolve
 
     narrator """He suppressed his emotions and, with a glimmer of hope, searched for his loved ones amidst the ruins of the hospital.Finally, he found his sister, barely clinging to life. 
 \n\n他强忍住情绪，怀着一丝侥幸的心理，在医院的废墟中翻找他的亲人。他终于发现姐姐，姐姐奄奄一息。"""
     
     nvl clear
 
-    scene bg ruins3 at img_wandering with dissolve
+    scene bg ruins3 at blood_gray_red, img_wandering with dissolve
 
     sister """Hurry up…find your brother
 \n\n快……找弟弟……"""
 
     nvl clear
 
-    scene bg ruins4 at img_wandering with dissolve
+    scene bg ruins4 at blood_gray_red, img_wandering with dissolve
 
     narrator """He fought back his grief and continued searching, stumbling and wiping away tears. Eventually, he came across his younger brother, trembling as he extended a trembling finger to check for any signs of life—there was nothing. He collapsed.
 \n\n哥哥忍住悲痛，踉踉跄跄地继续翻找，边翻找边擦眼泪。最后翻到了弟弟，他颤颤巍巍地伸出手指探了探弟弟的鼻息——什么也没有，他崩溃了。"""
@@ -50,9 +58,15 @@ label ruins:
     scene bg ruins5 at img_wandering with dissolve
 
     pause
-    call show_black_trans("ここはどんな世界ですか？", False)
-    # pause 0.1
-    show bottom_text onlayer black_trans_layer with Dissolve(1.4)
+    # call show_black_trans("ここはどんな世界ですか？", False)
+    $ ct_text_t = "ここはどんな世界ですか？"
+    show black_bg at Transform:
+        alpha 0.0
+        ease 2 alpha 0.3
+    pause 0.3
+    show ct_text font "fonts/GenEiKoburiMin6-R.ttf"# style ct_text_add
+    pause 0.3
+    show bottom_text onlayer black_trans_layer with Dissolve(0.3)
     jump qiaolang
 
     # show ct_text at truecenter with dissolve 

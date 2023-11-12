@@ -1,6 +1,5 @@
 # image bg black_trans_bg = Image()
 define config.layers += ["black_trans_layer"]
-define config.layers += ["particle"]
 # image tv = Fixed(Layer("broadcast"))
 image black_bg = Solid("#000")
 label show_black_trans(txt, stop_music=True):
