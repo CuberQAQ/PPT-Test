@@ -11,7 +11,7 @@ define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥�
 label hospital_two:
 
 
-
+    call hide_black_trans()
     
     play music "audio/bgm/卒業.mp3"
     scene bg nurse at LinearUp(1500, 0),ImgWandering(2.2, 1.7, 20) with dissolve
@@ -19,10 +19,10 @@ label hospital_two:
 
 
     scene flare_mask onlayer flare
-    call hide_black_trans() from _call_hide_black_trans_4
+    call hide_black_trans()
 
 
-    narrator"Meanwhile, inside the hospital, nurses were bandaging other injured patients while the elder brother went out to search for supplies.
+    narrator"Meanwhile, inside the hospital, nurses are bandaging other injured patients while the elder brother went out to search for supplies.
 \n\n与此同时，在医院里，护士在包扎其他伤员，哥哥外出寻找物资。"
 
     nvl clear
@@ -45,6 +45,7 @@ label hospital_two:
     nvl clear
 
     # scene bg hospital2_3 at img_wandering with dissolve
+    scene bg candle at ImgWandering(1.5, 1.0, 7), LinearUp(400, -400, 10)  with dissolve
 
     sister "What is this? Is the flame of civilization about to be extinguished?
 \n\n这算什么呢，文明的烛火要被熄灭了吗？"
@@ -81,7 +82,7 @@ label hospital_two:
 
 
 
-    call explosion from _call_explosion_1
+    call explosion 
 
     show bg ruins3 at Transform:
         alpha 0.0
@@ -103,8 +104,8 @@ label hospital_two:
     hide ct_text onlayer on_explosion with dissolve
     stop sound
     
-    call show_black_trans("Chapter 4  Ruins 废墟") from _call_show_black_trans_4
-    call hide_explosion from _call_hide_explosion_1
+    call show_black_trans("Ruins 废墟") 
+    call hide_explosion 
 
     jump elder_brother
 

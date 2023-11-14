@@ -6,7 +6,7 @@ label speaking:
 
     scene bg white_house  at img_wandering with fade
 
-    call hide_black_trans() from _call_hide_black_trans_5
+    call hide_black_trans() 
     
 
     narrator"The scene switched to the White House.
@@ -46,5 +46,7 @@ label speaking:
     chinese_diplomatist"We aim to prevent the situation from further escalating or even spiraling out of control. We strongly condemn any actions that harm civilians and violate international law. We call for the protection of civilians and the implementation of humanitarian assistance to prevent a more severe humanitarian catastrophe from unfolding.
 \n\n我们都反对伤害平民的行为和违反国际法的做法，呼吁保护平民开展人道救援，防止出现更严重的人道主义灾难。" 
     nvl clear
+
+    call show_black_trans("Chapter 4  Hospital   医院") 
 
     jump hospital_two

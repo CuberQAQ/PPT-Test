@@ -38,7 +38,7 @@ label elder_brother:
 
     #TODO new img
     scene bg ruins1 at blood_gray_red, img_wandering with dissolve
-    call hide_black_trans() from _call_hide_black_trans_1
+    call hide_black_trans() 
 
     scene bg elder_brother_ruin at blood_gray_red, img_wandering with dissolve
 

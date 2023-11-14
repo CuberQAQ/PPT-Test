@@ -13,10 +13,10 @@ label hospital_one:
    
     scene bg hospital_inside2 at img_wandering
     play music "audio/bgm/Fake Love.mp3"
-    call hide_black_trans() from _call_hide_black_trans_3
+    call hide_black_trans() 
     
 
-    narrator "In the recent bombing, the younger brother was seriously injured. The older brother and sister were slightly injured. After being rescued, they were sent to the hospital for treatment. At this time, a young mother appeared at the crowded hospital entrance.
+    narrator "In the recent bombing, the younger brother was seriously injured. The older brother and sister were slightly injured. After being rescued, they were sent to the hospital and were waiting for treatment. At this time, a young mother appeared at the crowded hospital entrance.
 \n\n在前不久的轰炸中，弟弟伤势较重。哥哥和姐姐身受轻伤。被人救出后，他们被送往医院等待治疗。此时，人满为患的医院门口出现了一位年轻母亲。"
     nvl clear
 
@@ -34,7 +34,7 @@ label hospital_one:
 \n\n不，不，不，他们都是骗子，他们杀了我的孩子，他们杀了我的孩子，他们为什么要杀我的孩子，他们为什么要杀我的孩子？！"
     nvl clear
 
-    # scene bg hospital2 at img_wandering with fade
+    scene bg hospital2 at img_wandering with fade
     nurse_1"Madam, he's here.
 \n\n夫人，他在这里。"
     nvl clear
@@ -43,7 +43,7 @@ label hospital_one:
 \n\n这……这是……这是我的婴儿吗？这是我的婴儿吗？"
     nvl clear
 
-    # scene bg crying_mom at img_wandering with fade
+    scene bg crying_mom at img_wandering with fade
 
     mother"My baby, what happened to you, why don’t you move, why don’t you cry, why don’t you smile? He’s just asleep, he’ll wake up soon, he’ll smile at me, he’ll call me mom, he’s my baby, my baby...
 \n\n我的婴儿，你怎么了，你为什么不动了，你为什么不哭了，你为什么不笑？他只是睡着了，他一会儿就会醒来，他会对我笑，他会叫我妈妈，他是我的宝贝，我的宝贝......."
@@ -57,7 +57,7 @@ label hospital_one:
 \n\n多么可爱的脸啊，如果我的孩子长大......"
     nvl clear
 
-    # scene bg younger_brother at img_wandering with fade
+    scene bg younger_brother at img_wandering with fade
 
     little_brother"Grow up... I didn't grow up in Palestine, I could have been shot and lost my life at any time, I could have been killed walking normally, this is my life as a Palestinian.
 \n\n长大……我在巴勒斯坦长不大，任何时候都可能被枪杀而失去生命，正常走路都可能被杀死，这就是我作为巴勒斯坦人的生活。"
@@ -85,7 +85,7 @@ label hospital_one:
 \n\n太拥挤了，所有的伤员转移到另一位置！"
     nvl clear
 
-    call show_black_trans("Chapter 3  Emergency   急救室") from _call_show_black_trans_3
+    call show_black_trans("Emergency   急救室") 
 
     jump emergency
     

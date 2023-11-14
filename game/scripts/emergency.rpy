@@ -7,10 +7,10 @@ define nurse= Character("Nurse", kind = nvl, who_suffix="\n护士")
 
 label emergency:
     scene bg emergency_and_corridor at img_wandering with fade
-    call hide_black_trans() from _call_hide_black_trans_2
+    call hide_black_trans()
 
 
-    narrator "The older brother made his way through the crowd and entered the hospital premises.
+    narrator "The older brother made his way through the crowd and entered the hospital.
 \n\n哥哥穿过人群进入医院内部。"
     nvl clear
 
@@ -53,11 +53,14 @@ label emergency:
 \n\n这么大的医院只留了一个护士在急救室？搞什么鬼！"
     nvl clear
 
-    # scene bg docter2 at img_wandering with dissolve
+    scene bg docter2 at img_wandering with dissolve
 
     doctor "Come on, hang in there, you can do it!
 \n\n加油，坚持住，你可以的！"
     nvl clear
+
+
+    scene bg emergency  at img_wandering with dissolve
 
     nurse "Stop, it’s too late, they are too badly injured, we have to save other people! There are still many wounded at the hospital gate!
 \n\n停下，已经太晚了，他们伤得太重了，我们得去救其他人！还有好多伤员在医院门口！"
@@ -87,7 +90,7 @@ label emergency:
 \n\n对不起，我们走吧。"
     nvl clear
 
-    call show_black_trans("Chapter 4  Announcement   国际态度") from _call_show_black_trans_1
+    call show_black_trans("Chapter 3  Announcement   国际态度") from _call_show_black_trans_1
     
 
     jump speaking

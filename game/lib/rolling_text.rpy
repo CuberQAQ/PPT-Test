@@ -38,7 +38,7 @@ define rolling_text_t = """
 {color=#FF6969}{size=40}医生{/size}{/color}
 唐  艺
 
-{color=#FF6969}{size=40}开头介绍{/size}{/color}
+{color=#FF6969}{size=40}介绍者{/size}{/color}
 罗淑芬
 
 {color=#FF6969}{size=40}护士{/size}{/color}
