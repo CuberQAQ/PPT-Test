@@ -13,16 +13,16 @@ label after_video:
     hide flare_mask onlayer flare
     show videoer movie_after with dissolve
     play music "audio/one day.mp3"
-    pause 20
+    pause 8
     scene rolling_mask onlayer rolling_mask at Transform:
         alpha 0.0
         easein 5 alpha 1.0
-        pause 48
+        pause 55
         easeout 5 alpha 0
 
     show rolling_text onlayer rolling_text at Transform:
         yoffset 500
-        linear 50.0 yoffset -4600
+        linear 57.0 yoffset -4100
         
 
     pause

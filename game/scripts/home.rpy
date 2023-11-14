@@ -30,9 +30,14 @@ label home:
 \n\n我们的故事发生在巴以冲突中，上一轮的轰炸发生在半个月前，此时此刻，幸存而残缺的一家人又重拾生活的希望，今天是弟弟的生日。"
 
     nvl clear
-    pause
-    
+
     scene bg home at img_wandering with dissolve
+
+    pause
+    elder_brother "Come here, my dear!
+\n\n过来，我亲爱的家人！"
+
+    nvl clear
     sister "Happy birthday, Kevin!
 \n\n生日快乐，Kevin！"
 
