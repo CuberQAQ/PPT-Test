@@ -24,7 +24,7 @@ label explosion(center_label=False):
     
     pause 1.3
     if center_label:
-        call expression center_label from _call_expression
+        call expression center_label
     pause 1
     show white_bg_2 onlayer explosion_bg:
         alpha 1.0

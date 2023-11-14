@@ -9,14 +9,17 @@ define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥�
 image black_bg = Solid("#000")
 
 style bottom_text:
+    # color "#555555ff"
     xalign 0.5
     yalign 0.57
-    size 50
+    font "fonts/楷体_GB2312.ttf"
+    size 42
     outlines [(3, "#000000a0", 0, 0)]
 
 style bottom_text2:
+    # color "#555555ff"
     xalign 0.5
-    yalign 0.57
+    yalign 0.6
     size 42
     outlines [(3, "#000000a0", 0, 0)]
 
@@ -33,12 +36,12 @@ image bottom_text = DynamicDisplayable(bottom_text_func)
 # 游戏在此开始。
 label elder_brother:
 
-    play music "audio/bgm/DeathWaltz.flac"
+    play music "audio/bgm/ninelie.mp3"
     pause 2.0
 
     #TODO new img
     scene bg ruins1 at blood_gray_red, img_wandering with dissolve
-    call hide_black_trans()
+    call hide_black_trans() 
 
     scene bg elder_brother_ruin at blood_gray_red, img_wandering with dissolve
 
@@ -63,8 +66,8 @@ label elder_brother:
 
     nvl clear
 
+    scene bg brother_crying at img_wandering with dissolve
     #TODO blood_grey_red
-    scene bg brother_crying at blood_gray_red, img_wandering with dissolve
 
     
     narrator "He fought back his grief and continued searching, stumbling and wiping away tears. Eventually, he came across his younger brother, trembling as he extended a trembling finger to check for any signs of life—there was nothing. He collapsed.
@@ -75,54 +78,54 @@ label elder_brother:
     
     show black_bg at Transform:
         alpha 0.0
-        ease 2 alpha 0.3
+        time 0.2
+        ease 1.2 alpha 0.3
 
-    $ ct_text_t = "ここはどんな世界ですか？"
+    $ ct_text3_t = "ここはどんな世界ですか？"
+    $ ct_text3_delay = 0.6
+    $ ct_text3_speed = .024
+    $ ct_text3_style_t = "ct_text3_style_jp"
     $ bottom_text_t = "不....这是什么世界！？"
 
-    pause 0.3
-    show ct_text font "fonts/GenEiKoburiMin6-R.ttf"# style ct_text_add
-    pause 0.3
-    show bottom_text with Dissolve(0.3)
+    show ct_text3 at ZoomEaseIn(begin=5,end=0.5,time=1.2), AlphaIn(end=1,time=0.6), Transform:
+        # time 1.07
+        # alpha 0.0
+        pass
+    pause 0.70
+    show bottom_text at Transform:
+        pass
+    with Dissolve(0.4) 
+    # pause
     pause
 
+    with None
+    hide bottom_text
+    hide ct_text3
+    with dissolve
+
+    pause
     
-    $ bottom_text_style = "bottom_text2"
 
-    $ ct_text_t2 = "I have lost all my loved ones! \nThey all perished in this raging war, one after another, leaving me behind..."
-    $ bottom_text_t = "我失去了所有的亲人！他们都在这场战火中丧命，一个接一个地离我而去...."
-
-    pause 0.3
-    show ct_text2 # font "fonts/GenEiKoburiMin6-R.ttf"# style ct_text_add
-    pause 0.3
-    show bottom_text with Dissolve(0.3)
-    pause
-
+    elder_brother "I have lost all my loved ones! They all perished in this raging war, one after another, leaving me behind...
+\n\n我失去了所有的亲人！他们都在这场战火中丧命，一个接一个地离我而去...."
     nvl clear
 
     scene bg crying_brother at blood_gray_red, img_wandering with dissolve
 
-    
-    $ ct_text_t = "ここはどんな世界ですか？"
     elder_brother "Oh, dear Allah! He is my last remaining family member... the very last one! He... he was such a lovely kid, always bringing joy to me with his singing, his smile so warm... But now, they are all gone. They have departed, leaving me in this bloody battlefield...
 \n\n哦，天啊！这是我最后一个家人..最后一个！他...他是那个最容易笑的人，他唱歌时总是让我开心，他的微笑是如此温暖...现在，他们都离开了。他们离开我留下了这血腥的战场..."
-    
     nvl clear
 
-    $ ct_text_t = "ここはどんな世界ですか？"
     elder_brother "This war... this endless cycle of hatred and destruction... I cannot bear it any more! I no longer seek vengeance; peace I only long for peace. I believe one day, we can put an end to this senseless slaughter, to the shedding of innocent blood!
 \n\n这场战争..这场无尽的仇恨与毁灭....我再也无法忍受！我不再寻求仇恨，我只渴望和平。只要有一天，我们能够停止这种毫无意义的杀戮，停止无辜者的流血！"
-
     nvl clear
 
-    pause
-    # call show_black_trans("ここはどんな世界ですか？", False)
-    $ ct_text_t = "ここはどんな世界ですか？"
-    
+    # pause
     
     # jump qiaolang
+    call show_black_trans("Love and Peace 爱与和平") 
 
-    return
+    jump after_video
 
     # show ct_text at truecenter with dissolve 
     # call show_black_trans("Chapter 1  Home   巴以冲突中的一家") from _call_show_black_trans

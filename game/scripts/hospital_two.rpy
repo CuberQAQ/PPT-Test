@@ -21,15 +21,15 @@ label center_label_1:
 label hospital_two:
 
 
-    call hide_black_trans()
+    scene bg nurse at LinearUp(1500, 0),ImgWandering(2.2, 1.7, 20) with dissolve
+    call hide_black_trans() from _call_hide_black_trans_6
     
     play music "audio/bgm/卒業.mp3"
-    scene bg nurse at LinearUp(1500, 0),ImgWandering(2.2, 1.7, 20) with dissolve
 
 
 
     scene flare_mask onlayer flare
-    call hide_black_trans()
+    call hide_black_trans() from _call_hide_black_trans_7
 
 
     narrator"Meanwhile, inside the hospital, nurses are bandaging other injured patients while the elder brother went out to search for supplies.
@@ -42,7 +42,7 @@ label hospital_two:
 
     nvl clear
 
-    scene bg madom at img_wandering with dissolve
+    scene bg madam at img_wandering with dissolve
 
     sister "Madam, why you are here?
 \n\n女士,您怎么在这？"
@@ -69,7 +69,7 @@ label hospital_two:
 
     # scene bg hospital2_4 at img_wandering with dissolve
 
-    sister "But, madom, we have already lost so much, can we truly recover?
+    sister "But, madam, we have already lost so much, can we truly recover?
 \n\n但是，女士，我们已经失去了那么多，真的能够恢复吗？"
 
     nvl clear
@@ -89,7 +89,7 @@ label hospital_two:
 
 
 
-    call explosion("center_label_1")
+    call explosion("center_label_1") from _call_explosion_1
     hide ct_text3 onlayer explosion_under
     show bg ruins3 at Transform:
         alpha 0.0
@@ -111,8 +111,8 @@ label hospital_two:
     hide ct_text onlayer on_explosion with dissolve
     stop sound
     
-    call show_black_trans("Ruins 废墟") 
-    call hide_explosion 
+    call show_black_trans("Ruins 废墟") from _call_show_black_trans_5 
+    call hide_explosion from _call_hide_explosion_1 
 
     jump elder_brother
 

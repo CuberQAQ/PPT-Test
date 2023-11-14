@@ -12,7 +12,7 @@ style bottom_text:
     # color "#555555ff"
     xalign 0.5
     yalign 0.57
-    font "fonts/楷体_GB2312.ttf"
+    # font "fonts/楷体_GB2312.ttf"
     size 42
     outlines [(3, "#000000a0", 0, 0)]
 
@@ -41,7 +41,7 @@ label elder_brother:
 
     #TODO new img
     scene bg ruins1 at blood_gray_red, img_wandering with dissolve
-    call hide_black_trans() 
+    call hide_black_trans() from _call_hide_black_trans_2 
 
     scene bg elder_brother_ruin at blood_gray_red, img_wandering with dissolve
 
@@ -61,7 +61,7 @@ label elder_brother:
 
     # scene bg ruins3 at blood_gray_red, img_wandering with dissolve
 
-    sister "Hurry up... Find your brother...
+    sister "Hurry up... Find Kevin...
 \n\n快……找弟弟……"
 
     nvl clear
@@ -78,16 +78,16 @@ label elder_brother:
     
     show black_bg at Transform:
         alpha 0.0
-        time 0.2
-        ease 1.2 alpha 0.5
+        time 0.15
+        ease 1.2 alpha 0.3
 
-    $ ct_text3_t = "ここはどんな世界ですか？"
+    $ ct_text3_t = "What... is this world!"#"ここはどんな世界ですか？"
     $ ct_text3_delay = 0.6
-    $ ct_text3_speed = .024
+    $ ct_text3_speed = .02
     $ ct_text3_style_t = "ct_text3_style_jp"
     $ bottom_text_t = "不....这是什么世界！？"
 
-    show ct_text3 at ZoomEaseIn(begin=5,end=0.5,time=1.2), AlphaIn(end=1,time=0.6), Transform:
+    show ct_text3 at ZoomEaseIn(begin=2,end=0.5,time=1.2), AlphaIn(end=1,time=0.6), Transform:
         # time 1.07
         # alpha 0.0
         pass
@@ -95,15 +95,15 @@ label elder_brother:
     show bottom_text at Transform:
         pass
     with Dissolve(0.4) 
-    # pause
     pause
+    # pause
 
-    with None
+    # with None
     hide bottom_text
     hide ct_text3
     with dissolve
 
-    pause
+    # pause
     
 
     elder_brother "I have lost all my loved ones! They all perished in this raging war, one after another, leaving me behind...
@@ -123,6 +123,7 @@ label elder_brother:
     # pause
     
     # jump qiaolang
+    # call show_black_trans("Love and Peace 爱与和平") from _call_show_black_trans_2 
 
     jump after_video
 

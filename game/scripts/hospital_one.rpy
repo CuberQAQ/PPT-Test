@@ -13,10 +13,10 @@ label hospital_one:
    
    
     play music "audio/bgm/Fake Love.mp3"
-    call hide_black_trans() 
+    call hide_black_trans() from _call_hide_black_trans_5 
     
 
-    narrator "In the recent bombing, the younger brother was seriously injured. The older brother and sister were slightly injured. After being rescued, they were sent to the hospital and were waiting for treatment. At this time, a young mother appeared at the crowded hospital entrance.
+    narrator "In the recent bombing, the younger brother was seriously injured. The elder brother and sister were slightly injured. After being rescued, they were sent to the hospital and were waiting for treatment. At this time, a young mother appeared at the crowded hospital entrance.
 \n\n在前不久的轰炸中，弟弟伤势较重。哥哥和姐姐身受轻伤。被人救出后，他们被送往医院等待治疗。此时，人满为患的医院门口出现了一位年轻母亲。"
     nvl clear
 
@@ -63,7 +63,7 @@ label hospital_one:
 \n\n长大……我在巴勒斯坦长不大，任何时候都可能被枪杀而失去生命，正常走路都可能被杀死，这就是我作为巴勒斯坦人的生活。"
     nvl clear
 
-    little_brother"Bruce, pain, I`m in so much pain... I feel like I am going to die...
+    little_brother"Brother, pain, I`m in so much pain... I feel like I am going to die...
 \n\n哥哥，好痛，我好痛啊……我感觉我要不行了……"
     nvl clear
    
@@ -85,7 +85,7 @@ label hospital_one:
 \n\n太拥挤了，所有的伤员转移到另一位置！"
     nvl clear
 
-    call show_black_trans("Emergency   急救室") 
+    call show_black_trans("Emergency   急救室") from _call_show_black_trans_4 
 
     jump emergency
     

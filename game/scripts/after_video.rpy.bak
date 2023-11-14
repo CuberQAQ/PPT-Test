@@ -1,16 +1,8 @@
 image videoer movie_after = Movie(play="movies/after.webm")
 define config.layers += ["rolling_mask"]
 define config.layers += ["rolling_text"]
-image black_bg = Solid("#000")
-image black_bg2 = Solid("#000")
 label after_video:
-    # call hide_black_trans() from _call_hide_black_trans
-    stop music fadeout 2
-    show black_bg with dissolve
-    pause
-    show black_bg2 onlayer rolling_mask at Transform:
-        alpha 0.3
-    hide flare_mask onlayer flare
+    call hide_black_trans()
     show videoer movie_after with dissolve
     play music "audio/one day.mp3"
     pause 20

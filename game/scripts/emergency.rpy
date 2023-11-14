@@ -8,11 +8,11 @@ define nurse= Character("Nurse", kind = nvl, who_suffix="\n护士")
 label emergency:
     #scene bg emergency_and_corridor at img_wandering
     scene bg cannot_hold at img_wandering with dissolve 
-    call hide_black_trans()
+    call hide_black_trans() from _call_hide_black_trans_3
 
     play music "audio/bgm/Tassel.ogg"
 
-    narrator "The older brother made his way through the crowd and entered the hospital.
+    narrator "The elder brother made his way through the crowd and entered the hospital.
 \n\n哥哥穿过人群进入医院内部。"
     nvl clear
 
@@ -70,7 +70,7 @@ label emergency:
 \n\n停下，已经太晚了，他们伤得太重了，我们得去救其他人！还有好多伤员在医院门口！"
     nvl clear
 
-    doctor "What are you talking about? I’m a doctor! Even though I know, you’re right. But... for so many days, one by one, lives die in front of me, and I’m powerless, what’s the point of my living...
+    doctor "What are you talking about? I’m a doctor! Even though I know, you’re right. But... for so many days, lives die in front of me, one by one, and I’m powerless, what’s the point of my living...
 \n\n你说的是什么话？我是医生啊！虽然我知道，你说的没错。但是……这么多天，一个个生命从我面前死去，而我却无能为力，我活着还有什么意义啊……"
     nvl clear
 

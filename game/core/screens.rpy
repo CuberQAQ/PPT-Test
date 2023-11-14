@@ -419,6 +419,11 @@ The Fire of War
         yalign 0.92
         text_size 60
         text_color "#eeeeeeee"
+    textbutton _("设置") action ShowMenu("preferences"):
+        xalign 0.97
+        yalign 0.97
+        text_size 36
+        text_color "#eeeeee80"
 
     if gui.show_name:
 

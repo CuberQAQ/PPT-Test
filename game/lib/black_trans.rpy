@@ -7,7 +7,7 @@ label show_black_trans(txt, stop_music=True):
     # show tv
     show black_bg onlayer black_trans_layer with Dissolve(1.5)
     if stop_music:
-        stop music fadeout 1.5
+        stop music fadeout 3
     pause
     play audio "audio/sfx/typing_keybroad.wav"
     pause 0.2
