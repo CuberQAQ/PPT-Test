@@ -45,7 +45,7 @@ label hospital_two:
     nvl clear
 
     # scene bg hospital2_3 at img_wandering with dissolve
-    scene bg candle at ImgWandering(1.5, 1.0, 7), LinearUp(400, -400, 10)  with dissolve
+    scene bg candle at img_wandering  with dissolve
 
     sister "What is this? Is the flame of civilization about to be extinguished?
 \n\n这算什么呢，文明的烛火要被熄灭了吗？"
