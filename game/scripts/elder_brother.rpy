@@ -66,8 +66,8 @@ label elder_brother:
 
     nvl clear
 
+    scene bg brother_crying at img_wandering with dissolve
     #TODO blood_grey_red
-    scene bg brother_crying at blood_gray_red, ImgWandering(1, 1.5) with dissolve
 
     
     narrator "He fought back his grief and continued searching, stumbling and wiping away tears. Eventually, he came across his younger brother, trembling as he extended a trembling finger to check for any signs of life—there was nothing. He collapsed.
