@@ -18,7 +18,7 @@ public:
   Graph() {
 
   }
-}
+};
 
 
 int main() {

@@ -340,17 +340,27 @@ style navigation_button_text:
 ## https://www.renpy.cn/doc/screen_special.html#main-menu
 
 transform img_wandering:
-    zoom 1.5
-    xalign 0.50
-    yalign 0.50
+    zoom 1.50
+    xalign 0.50000
+    yalign 0.50000
     linear 20.0 zoom 1.0# xoffset -100.0 yoffset -100.0
 
+# transform ImgWandering():
+#     zoom 1.3
+#     xalign 0.50000
+#     yalign 0.50000
+#     linear 20.0 zoom 1.0# xoffset -100.0 yoffset -100.0
 
-transform ImgWandering(begin, end):
+transform LinearUp(begin, end, time = 20):
+    yoffset begin
+    linear time yoffset end
+
+
+transform ImgWandering(begin, end, time=20.0):
     zoom begin
     xalign 0.50
     yalign 0.50
-    linear 20.0 zoom end# xoffset -100.0 yoffset -100.0
+    linear time zoom end# xoffset -100.0 yoffset -100.0
 
 transform ease_up:
     yoffset 80.0
@@ -1405,6 +1415,7 @@ screen nvl_dialogue(dialogue):
                     size 40
                     outlines [(4, "#000000a0", 1, 1)]
                     line_spacing 10
+                    # default_kern 3
     
 
 

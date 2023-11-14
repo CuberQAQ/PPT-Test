@@ -14,43 +14,40 @@ transform alpha_in:
 label home:
 
     scene bg bg4 at img_wandering
-    play music "audio/bgm/時編み.mp3"
-    call hide_black_trans() from _call_hide_black_trans
-    pause 0.5
+    play music "audio/bgm/MerryChrismas.mp3"
+    # call hide_black_trans() from _call_hide_black_trans
+    # pause 0.5
 
-    narrator """Our story takes place amidst the Israeli-Palestinian conflict, with the last round of bombings occurring half a month ago. At this very moment, a surviving yet fragmented family is rekindling hope for their lives, as today marks the younger brother's birthday.
-\n\n我们的故事发生在巴以冲突中，上一轮的轰炸发生在半个月前，此时此刻，幸存而残缺的一家人又重拾生活的希望，今天是弟弟的生日。"""
+    narrator "Our story takes place amidst the Israeli-Palestinian conflict, with the last round of bombings occurring half a month ago. At this very moment, a surviving yet fragmented family is recolleting hope for their lives, as today marks the younger brother's birthday.
+\n\n我们的故事发生在巴以冲突中，上一轮的轰炸发生在半个月前，此时此刻，幸存而残缺的一家人又重拾生活的希望，今天是弟弟的生日。"
 
     nvl clear
     scene bg home at img_wandering with dissolve
-    sister """Happy birthday, Kevin!
-\n\n生日快乐，Kevin！"""
+    sister "Happy birthday, Kevin!
+\n\n生日快乐，Kevin！"
 
     nvl clear
-    elder_brother """Make a wish, in this difficult time.
-\n\n许个愿吧，在这艰难的时刻。"""
+    elder_brother "Make a wish, in this difficult time.
+\n\n许个愿吧，在这艰难的时刻。"
 
 
     nvl clear
-    little_brother """If only Mom and Dad were here...
-\n\n如果爸爸妈妈也在就好了……"""
+    little_brother "If only Mom and Dad were here...
+\n\n如果爸爸妈妈也在就好了……"
 
     # $ renpy.display_menu(items, interact=True, screen='choice')
 
     nvl clear
-    sister """It will all turn around.
-\n\n一切都会好的。"""
+    sister "It will all turn around.
+\n\n一切都会好的。"
     nvl clear
 
-    stop music
-    play music "audio/sfx/air_defense_warning.mp3" volume 0.4
-    pause
-    stop music fadeout 20.0
+    stop music fadeout 0.5
     
     scene bg home at Transform:
         time 3.0
         matrixcolor SaturationMatrix(0.0)
-    call explosion
+    call explosion from _call_explosion
 
 #     narrator """The bomb hit the home!
 # 炸弹袭击了这个家!"""
@@ -63,8 +60,10 @@ label home:
     # nvl clear
 
     pause
-    hide ct_text onlayer on_explosion with dissolve
+    hide ct_text onlayer on_explosion 
+    #with dissolve
     stop sound
-    call show_black_trans("Chapter 2  Hospital   医院")
-    jump hospital
+    call show_black_trans("Chapter 2  Hospital   医院") from _call_show_black_trans_2
+    call hide_explosion from _call_hide_explosion
+    jump hospital_one
 

@@ -3,6 +3,7 @@ image videoer movie = Movie(play="movies/introduction.webm")
 label before_video:
 
     show videoer movie with dissolve 
+    call hide_black_trans()
 
     $ video_bottom_text_t = "The conflict between Palestine and Israel is a long-term confrontation,"
     $ video_bottom_text_t2 = "巴以冲突是巴勒斯坦和以色列之间的长期对抗，"
@@ -11,7 +12,7 @@ label before_video:
     hide video_bottom_text
 
 
-    $ video_bottom_text_t = "mainly because of the dispute over territory and religion. "
+    $ video_bottom_text_t = "mainly because of the dispute over territory and religion."
     $ video_bottom_text_t2 = "主要是因为领土和宗教的争端。"
     show video_bottom_text with dissolve
     pause
@@ -29,19 +30,19 @@ label before_video:
     pause
     hide video_bottom_text
 
-    $ video_bottom_text_t = "and its territory was occupied. "
+    $ video_bottom_text_t = "and its territory was occupied."
     $ video_bottom_text_t2 = "其领土被占领。"
     show video_bottom_text with dissolve
     pause
     hide video_bottom_text
 
-    $ video_bottom_text_t = "Since then, the two sides have had several wars and conflicts, "
+    $ video_bottom_text_t = "Since then, the two sides have had several wars and conflicts,"
     $ video_bottom_text_t2 = "此后，双方发生了多次战争和冲突，"
     show video_bottom_text with dissolve
     pause
     hide video_bottom_text
 
-    $ video_bottom_text_t = "resulting in a large number of casualties and refugees.  "
+    $ video_bottom_text_t = "resulting in a large number of casualties and refugees. "
     $ video_bottom_text_t2 = "导致了大量的人员伤亡和难民问题。"
     show video_bottom_text with dissolve
     pause
@@ -55,11 +56,14 @@ label before_video:
 
     $ video_bottom_text_t = "and there are still many differences and obstacles between the two sides."
     $ video_bottom_text_t2 = "双方仍存在很多分歧和障碍。"
-    show video_bottom_text with dissolve
+    show video_bottom_text # with dissolve
     pause
     hide video_bottom_text
  
     hide videoer
 
-    # 此处为游戏结尾。
-    jump classroom
+    hide videoer movie
+    
+
+
+    jump home

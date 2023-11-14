@@ -68,5 +68,5 @@ label classroom:
     nvl clear
 
     # show ct_text at truecenter with dissolve 
-    call show_black_trans("Chapter 1  Home   巴以冲突中的一家")
+    call show_black_trans("Chapter 1  Home   巴以冲突中的一家") from _call_show_black_trans
     jump home

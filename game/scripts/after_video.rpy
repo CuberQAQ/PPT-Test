@@ -1,0 +1,19 @@
+image videoer movie_after = Movie(play="movies/after.webm")
+define config.layers += ["rolling_mask"]
+define config.layers += ["rolling_text"]
+label after_video:
+    show videoer movie_after with dissolve
+    play music "audio/one day.mp3"
+    pause 20
+    scene rolling_mask onlayer rolling_mask at Transform:
+        alpha 0.0
+        easein 5 alpha 1.0
+        pause 48
+        easeout 5 alpha 0
+
+    show rolling_text onlayer rolling_text at Transform:
+        yoffset 500
+        linear 50.0 yoffset -4600
+        
+
+    pause
