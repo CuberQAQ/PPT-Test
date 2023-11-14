@@ -11,7 +11,7 @@ define nurse= Character("Nurse", kind = nvl, who_suffix="\n护士")
 
 label hospital_one:
    
-    scene bg hospital_inside2 at img_wandering
+   
     play music "audio/bgm/Fake Love.mp3"
     call hide_black_trans() 
     

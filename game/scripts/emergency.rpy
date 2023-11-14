@@ -6,7 +6,8 @@ define mother = Character("Mother", kind = nvl, who_suffix="\n妈妈")
 define nurse= Character("Nurse", kind = nvl, who_suffix="\n护士")
 
 label emergency:
-    scene bg emergency_and_corridor at img_wandering
+    #scene bg emergency_and_corridor at img_wandering
+    scene bg cannot_hold at img_wandering with dissolve 
     call hide_black_trans()
 
     play music "audio/bgm/Tassel.ogg"
@@ -23,6 +24,8 @@ label emergency:
 \n\n抱歉，但你要再等一下，里面的人伤得非常严重，马上就好……"
     nvl clear 
 
+    scene bg docter1 at img_wandering with dissolve
+
     doctor "CPR!
 \n\n准备心肺复苏！"
     nvl clear
@@ -33,7 +36,7 @@ label emergency:
 \n\n快，快，再快！时间就是生命！"
     nvl clear
 
-    scene bg cannot_hold at img_wandering with dissolve
+   
  
     nurse "Doctor, it doean’t work, the others can’t hold on either!
 \n\n医生，不行了，另外几个也坚持不住了！"
@@ -43,7 +46,7 @@ label emergency:
 \n\n还有其他人手吗？"
     nvl clear
 
-    scene bg docter1 at img_wandering with dissolve
+    
  
 
     nurse "No one can be spared, they have gone to the bombing area for emergency treatment...
@@ -61,7 +64,7 @@ label emergency:
     nvl clear
 
 
-    scene bg emergency  at img_wandering with dissolve
+    
 
     nurse "Stop, it’s too late, they are too badly injured, we have to save other people! There are still many wounded at the hospital gate!
 \n\n停下，已经太晚了，他们伤得太重了，我们得去救其他人！还有好多伤员在医院门口！"
