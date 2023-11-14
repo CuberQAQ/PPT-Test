@@ -4,7 +4,7 @@ define chinese_diplomatist= Character("Chinese Diplomatist", kind = nvl, who_suf
 
 label speaking:
 
-    scene bg white_house  at img_wandering with fade
+    scene bg white_house at img_wandering
 
     call hide_black_trans() 
     
@@ -33,7 +33,7 @@ label speaking:
 \n\n食物供应正在危险地运行,医院挤满了病人和因药品耗尽而受伤的人,停尸房里堆满了尸体。"
     nvl clear 
 
-    scene bg ministry at img_wandering with fade
+    scene bg ministry with pushup
     play music "audio/bgm/ministry.mp3"
     narrator"The scene switched to ministry of foreign affairs of China.
 \n\n场景转到了中国外交部。"

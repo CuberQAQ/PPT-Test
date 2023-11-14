@@ -9,14 +9,17 @@ define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥�
 image black_bg = Solid("#000")
 
 style bottom_text:
+    # color "#555555ff"
     xalign 0.5
     yalign 0.57
-    size 50
+    font "fonts/楷体_GB2312.ttf"
+    size 42
     outlines [(3, "#000000a0", 0, 0)]
 
 style bottom_text2:
+    # color "#555555ff"
     xalign 0.5
-    yalign 0.57
+    yalign 0.6
     size 42
     outlines [(3, "#000000a0", 0, 0)]
 
@@ -64,7 +67,7 @@ label elder_brother:
     nvl clear
 
     #TODO blood_grey_red
-    scene bg brother_crying at blood_gray_red, img_wandering with dissolve
+    scene bg brother_crying at blood_gray_red, ImgWandering(1, 1.5) with dissolve
 
     
     narrator "He fought back his grief and continued searching, stumbling and wiping away tears. Eventually, he came across his younger brother, trembling as he extended a trembling finger to check for any signs of life—there was nothing. He collapsed.
@@ -75,30 +78,45 @@ label elder_brother:
     
     show black_bg at Transform:
         alpha 0.0
-        ease 2 alpha 0.3
+        time 0.2
+        ease 1.2 alpha 0.5
 
-    $ ct_text_t = "ここはどんな世界ですか？"
+    $ ct_text3_t = "ここはどんな世界ですか？"
+    $ ct_text3_delay = 0.6
+    $ ct_text3_speed = .024
+    $ ct_text3_style_t = "ct_text3_style_jp"
     $ bottom_text_t = "不....这是什么世界！？"
 
-    pause 0.3
-    show ct_text font "fonts/GenEiKoburiMin6-R.ttf"# style ct_text_add
-    pause 0.3
-    show bottom_text with Dissolve(0.3)
+    show ct_text3 at ZoomEaseIn(begin=5,end=0.5,time=1.2), AlphaIn(end=1,time=0.6), Transform:
+        # time 1.07
+        # alpha 0.0
+        pass
+    pause 0.70
+    show bottom_text at Transform:
+        pass
+    with Dissolve(0.4) 
+    # pause
     pause
 
+    with None
+    hide bottom_text
+    hide ct_text3
+    with dissolve
+
+    pause
     
-    $ bottom_text_style = "bottom_text2"
+    # $ bottom_text_style = "bottom_text2"
 
-    $ ct_text_t2 = "I have lost all my loved ones! \nThey all perished in this raging war, one after another, leaving me behind..."
-    $ bottom_text_t = "我失去了所有的亲人！他们都在这场战火中丧命，一个接一个地离我而去...."
+    $ ct_text_t2 = "I have lost all my loved ones! \nThey all perished in this raging war, \none after another, leaving me behind...\n\n我失去了所有的亲人！\n他们都在这场战火中丧命，\n一个接一个地离我而去...."
+    # $ bottom_text_t = ""
 
-    pause 0.3
-    show ct_text2 # font "fonts/GenEiKoburiMin6-R.ttf"# style ct_text_add
-    pause 0.3
-    show bottom_text with Dissolve(0.3)
+    # pause 0.3
+    show ct_text2  with dissolve # font "fonts/GenEiKoburiMin6-R.ttf"# style ct_text_add
+    # pause 0.3
+    # show bottom_text with Dissolve(0.3)
     pause
 
-    nvl clear
+    # nvl clear
 
     scene bg crying_brother at blood_gray_red, img_wandering with dissolve
 

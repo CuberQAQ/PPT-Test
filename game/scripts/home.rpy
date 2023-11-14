@@ -3,13 +3,19 @@ define sister = Character("Sister", kind = nvl, who_suffix="\n姐姐")
 define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥哥")
 define little_brother = Character("Little Brother", kind = nvl, who_suffix="\n弟弟")
 
-image snow = SnowBlossom("particle/fire.png", count=600, yspeed=(-3200, -2800), xspeed=(-700,700))
+image snow = SnowBlossom("particle/fire.png", count=200, yspeed=(-3200, -2800), xspeed=(-700,700))
 
 transform alpha_in:
     zoom 1.0
     alpha 0.0
     # time 1.0
     easeout 2 alpha 0.8
+
+transform AlphaIn(begin=0.0, end=0.8, time=2, dl=0):
+    alpha 0.0
+    time dl
+    # time 1.0
+    easein_quart time alpha end
 
 label home:
 

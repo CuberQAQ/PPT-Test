@@ -7,6 +7,16 @@ define sister = Character("Sister", kind = nvl, who_suffix="\n姐姐")
 define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥哥")
 
 
+label center_label_1:
+    $ ct_text3_t = "Take Care 卧倒！"
+    $ ct_text3_delay = 0.38
+    $ ct_text3_speed = .024
+
+    show ct_text3 onlayer explosion_under at ZoomEaseIn(begin=0.01,end=1.5,time=1.2), AlphaIn(end=0.9,time=0.6), Transform:
+        time 1.07
+        alpha 0.0
+    return
+
 # 游戏在此开始。
 label hospital_two:
 
@@ -45,7 +55,7 @@ label hospital_two:
     nvl clear
 
     # scene bg hospital2_3 at img_wandering with dissolve
-    scene bg candle at img_wandering  with dissolve
+    scene bg candle at ImgWandering(1.5, 1.0, 15)  with dissolve
 
     sister "What is this? Is the flame of civilization about to be extinguished?
 \n\n这算什么呢，文明的烛火要被熄灭了吗？"
@@ -64,17 +74,14 @@ label hospital_two:
 
     nvl clear
 
+    scene bg hospital_inside2 at img_wandering with dissolve
+
     teacher "The flames of war may destroy buildings, but they cannot destroy the culture within our hearts. Everything will be alright.
 \n\n战火可以摧毁建筑，但无法摧毁我们心中的文化。一切都会好的。"
 
     nvl clear
 
-    teacher "Take care!
-\n\n卧倒！"
-
-    nvl clear
-
-    
+   
     # play audio "audio/sfx/air_defense_warning.mp3" volume 0.4
     # pause
     # stop audio fadeout 20.0
@@ -82,8 +89,8 @@ label hospital_two:
 
 
 
-    call explosion 
-
+    call explosion("center_label_1")
+    hide ct_text3 onlayer explosion_under
     show bg ruins3 at Transform:
         alpha 0.0
         ease 2 alpha 1.0

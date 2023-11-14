@@ -6,9 +6,10 @@ define mother = Character("Mother", kind = nvl, who_suffix="\n妈妈")
 define nurse= Character("Nurse", kind = nvl, who_suffix="\n护士")
 
 label emergency:
-    scene bg emergency_and_corridor at img_wandering with fade
+    scene bg emergency_and_corridor at img_wandering
     call hide_black_trans()
 
+    play music "audio/bgm/Tassel.ogg"
 
     narrator "The older brother made his way through the crowd and entered the hospital.
 \n\n哥哥穿过人群进入医院内部。"

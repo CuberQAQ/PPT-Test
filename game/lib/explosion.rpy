@@ -1,12 +1,13 @@
 image videoer explosion = Movie(play="movies/explosion.webm",mask="movies/explosion_alpha.webm",loop=False)
 image black_bg_2 = Solid("#000")
 image white_bg_2 = Solid("#fff")
+define config.layers += ["explosion_under"]
 define config.layers += ["explosion_bg"]
 define config.layers += ["particle"]
 define config.layers += ["explosion"]
 define config.layers += ["on_explosion"]
 
-label explosion:
+label explosion(center_label=False):
     # 炸弹爆炸 开始
     stop music fadeout 20
     stop audio
@@ -20,8 +21,12 @@ label explosion:
         alpha 0
         time 2.3
         easein 0.7 alpha 0.7
-    pause 2.3
-    show white_bg_2:
+    
+    pause 1.3
+    if center_label:
+        call expression center_label
+    pause 1
+    show white_bg_2 onlayer explosion_bg:
         alpha 1.0
         time 0.08
         alpha 0.0
@@ -40,7 +45,7 @@ label explosion:
     # camera on_explosion at shake_after_explosion
     with None
     pause 1.0
-    hide white_bg_2
+    hide white_bg_2 onlayer explosion_bg
     show snow onlayer particle at Transform:
         alpha 1.0
         time 10.0
