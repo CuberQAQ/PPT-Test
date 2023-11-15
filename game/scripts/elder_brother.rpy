@@ -6,6 +6,9 @@ define teacher = Character("Miss You", kind = nvl, who_suffix="\n老师")
 define sister = Character("Sister", kind = nvl, who_suffix="\n姐姐")
 define elder_brother = Character("Elder Brother", kind = nvl, who_suffix="\n哥哥")
 
+image magic = "images/magic.png"
+
+define config.layers += ["magic_text"]
 image black_bg = Solid("#000")
 
 style bottom_text:
@@ -82,20 +85,30 @@ label elder_brother:
         time 0.15
         ease 1.2 alpha 0.3
 
-    $ ct_text3_t = "What is this world!?" # "これはどんな世界ですか？"
-    $ ct_text3_delay = 0.43
-    $ ct_text3_speed = .015
+    $ ct_text3_t = "これはどんな世界ですか？"
+    $ ct_text3_delay = 4.3
+    $ ct_text3_speed = 0.3
     $ ct_text3_pre_len = 1
     $ ct_text3_style_t = "ct_text3_style_jp"
     $ bottom_text_t = "不....这是什么世界！？"
 
-    show ct_text3 at ZoomEaseIn(begin=3,end=0.5,time=1), AlphaIn(end=1,time=0.3), Transform:
+    show ct_text3 onlayer magic_text at ZoomEaseIn(begin=20 ,end=0.9,time=10), AlphaIn(end=0.8,time=0.5), Transform:
         # time 1.07
         # alpha 0.0
         pass
     pause 0.55
-    show bottom_text at Transform:
+    show magic  at Transform:
+        alpha 0.8
+        xalign 0.5
+        yalign 0.5
+        easeout 1 rotate 359
+        block:
+            rotate 0
+            linear 0.01 rotate 359
+            repeat 
         pass
+    pause 10
+    # show bottom_text
     with Dissolve(0.2) 
     pause
     # pause

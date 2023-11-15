@@ -18,18 +18,22 @@ label after_video:
     scene rolling_mask onlayer rolling_mask at Transform:
         alpha 0.0
         easein 5 alpha 1.0
-        pause 55
-        easeout 5 alpha 0
 
     show rolling_text onlayer rolling_text at Transform:
         yoffset 500
-        linear 57.0 yoffset -4100
+        linear 65.0 yoffset -4750
         
-    pause
-    hide videoer movie_after
-    hide black_bg with dissolve
-    hide black_bg2 onlayer rolling_mask1
-    hide rolling_text onlayer rolling_text
+    pause 67
     hide rolling_mask onlayer rolling_mask
-    scene bg dove with dissolve
+    hide rolling_text onlayer rolling_text
+    hide black_bg2 onlayer rolling_mask1
+    hide videoer movie_after
+    hide black_bg
+    scene bg dove at img_wandering
+    with dissolve
+    pause 13
+    stop music fadeout 3
+        # easein 
+    pause
+
     pause

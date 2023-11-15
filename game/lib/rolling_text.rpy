@@ -5,7 +5,7 @@ define rolling_text_t = """
 {color=#FF6969}{size=40}编剧{/size}{/color}
 唐  艺   古恩宇
 
-{color=#FF6969}{size=40}后期{/size}{/color}
+{color=#FF6969}{size=40}幕后制作{/size}{/color}
 阮丽颖 洪鑫雯 文泽豪
 
 {color=#FF6969}{size=40}哥哥{/size}{/color}
@@ -62,6 +62,8 @@ define rolling_text_t = """
 陈美逸 申  堰
 古恩宇 游  欣
     
+{color=#FF6969}{size=40}Visual Novel 引擎{/size}{/color}
+{image=logo/renpy-logo.png} {size=65}RenPy{/size}
 """
 
 style rolling_text_style:

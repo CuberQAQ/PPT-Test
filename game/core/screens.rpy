@@ -1421,7 +1421,7 @@ screen nvl_dialogue(dialogue):
                     id d.what_id
                     # xalign 0.1
                     # color "#ffffffe0"
-                    size 40
+                    size 42
                     outlines [(4, "#000000a0", 1, 1)]
                     line_spacing 10
                     # default_kern 3

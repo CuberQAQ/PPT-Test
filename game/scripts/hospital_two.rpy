@@ -26,7 +26,7 @@ label hospital_two:
 
 
     scene bg nurse at LinearUp(1500, 0),ImgWandering(2.2, 1.7, 20) with dissolve
-    call hide_black_trans() from _call_hide_black_trans_6
+    # call hide_black_trans() from _call_hide_black_trans_6
     
     play music "audio/bgm/卒業.mp3"
 

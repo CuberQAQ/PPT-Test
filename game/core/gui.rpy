@@ -347,7 +347,7 @@ define gui.nvl_borders = Borders(0, 15, 0, 30)
 define gui.nvl_list_length = None
 
 ## NVL 模式条目的高度。将此设置为 None 可使条目动态调整高度。
-define gui.nvl_height = 800
+define gui.nvl_height = 1000
 
 ## 当 gui.nvl_height 为 None 时，NVL 模式条目之间的间距，以及 NVL 模式条目和 NVL
 ## 模式菜单之间的间距。

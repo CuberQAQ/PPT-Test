@@ -82,13 +82,13 @@ label emergency:
 \n\n我是一个废物，只要战争一天不结束，数不清的伤员就会一波又一波地涌来，我谁也救不了，我再也忍受不了了！"
     nvl clear
 
-    elder_brother "No, no, you are a doctor, it’s not your fault. Now, there are still people who can be saved... Please kneels and cries, save my younger brother! Please...
-\n\n不，不，你可是医生啊，这不怪你。现在，还有能救的人……求求你了，救救我弟弟吧！求求你了……"
+    elder_brother "No, no, doctor, it’s not your fault. Now, there are still people who can be saved... Please kneels and cries, save my younger brother! Please...
+\n\n不，不，医生，这不怪你。现在，还有能救的人……求求你了，救救我弟弟吧！求求你了……"
     nvl clear
 
-    nurse "Yes, doctor. Calm down please.
+    nurse "Yes, doctor. Please calm down.
 \n\n是的，医生，请你冷静一点。"
-    nvl clear  
+    nvl clear 
 
     doctor "I’m sorry, let’s go.
 \n\n对不起，我们走吧。"

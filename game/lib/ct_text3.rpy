@@ -11,10 +11,12 @@ define ct_text3_style_t = "ct_text3_style"
 style ct_text3_style_jp:
     xalign 0.5
     yalign 0.5
-    # font "fonts/GenEiKoburiMin6-R.ttf"
-    font "fonts/Minecraft Evenings Updated.ttf"
-    size 160
-    outlines [(6, "#000000a0", 0, 0)]
+    font "fonts/GenEiKoburiMin6-R.ttf"
+    # font "fonts/times-new-roman.ttf"
+    # font "fonts/Minecraft Evenings Updated.ttf"
+    size 140
+    # color "#ffffff80"
+    outlines [(4, "#000000a0", 0, 0)]
 
 transform ZoomEaseIn(begin=4.6, end=1, time=1.5, dl=0):
     time dl

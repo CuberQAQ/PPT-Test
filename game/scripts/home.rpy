@@ -35,7 +35,7 @@ label home:
 
     pause
     elder_brother "Come here, my dear!
-\n\n过来，我亲爱的家人！"
+\n\n快过来，我亲爱的家人！"
 
     nvl clear
     sister "Happy birthday, Kevin!
