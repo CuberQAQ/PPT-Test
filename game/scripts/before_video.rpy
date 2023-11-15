@@ -1,7 +1,7 @@
 image videoer movie = Movie(play="movies/introduction.webm")
 
 label before_video:
-
+    
     show videoer movie with dissolve 
     call hide_black_trans() from _call_hide_black_trans_1
 

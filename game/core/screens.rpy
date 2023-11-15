@@ -395,6 +395,9 @@ screen main_menu():
     # use navigation
     style_prefix "main_menu"
 
+    $ renpy.music.stop("music")
+    $ renpy.music.play("audio/bgm/DeathWaltz.flac", "music")
+
     text _("""The Glim of Candles 
 ＆
 The Fire of War
@@ -1388,7 +1391,7 @@ screen nvl(dialogue, items=None):
 # init python:
 #     def nloaded(d):
 #         return stk
-
+define nvl_anime = True
 screen nvl_dialogue(dialogue):
     for d in dialogue:
 
@@ -1399,10 +1402,11 @@ screen nvl_dialogue(dialogue):
             frame:
                 background None# Frame("gui/nvl_frame.png", Borders(65,65,65,65, pad_left=20,pad_top=20,pad_right=20,pad_bottom=20), tile=gui.frame_tile)
                 # $ print(stk2)
-                at EaseUp(0,1)
-                at transform:
-                    alpha 0.25
-                    easein 0.7 alpha 1   
+                if nvl_anime:
+                    at EaseUp(0,1)
+                    at transform:
+                        alpha 0.25
+                        easein 0.7 alpha 1   
                 xalign 0.5
                 # yfit gui.nvl_height is None
                 xpadding 30

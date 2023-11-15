@@ -8,9 +8,9 @@ define nurse= Character("Nurse", kind = nvl, who_suffix="\n护士")
 label emergency:
     #scene bg emergency_and_corridor at img_wandering
     scene bg cannot_hold at img_wandering with dissolve 
+    play music "audio/bgm/Tassel.mp3"
     call hide_black_trans() from _call_hide_black_trans_3
 
-    play music "audio/bgm/Tassel.ogg"
 
     narrator "The elder brother made his way through the crowd and entered the hospital.
 \n\n哥哥穿过人群进入医院内部。"

@@ -11,6 +11,7 @@ define nurse= Character("Nurse", kind = nvl, who_suffix="\n护士")
 
 label hospital_one:
    
+    scene bg mother at img_wandering with dissolve
    
     play music "audio/bgm/Fake Love.mp3"
     call hide_black_trans() from _call_hide_black_trans_5 
@@ -20,7 +21,6 @@ label hospital_one:
 \n\n在前不久的轰炸中，弟弟伤势较重。哥哥和姐姐身受轻伤。被人救出后，他们被送往医院等待治疗。此时，人满为患的医院门口出现了一位年轻母亲。"
     nvl clear
 
-    scene bg mother at img_wandering with dissolve
 
     mother"My kid, where is my kid? Where is he?
 \n\n我的孩子，我的孩子在哪里？他在哪里？"

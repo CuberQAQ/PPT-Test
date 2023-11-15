@@ -23,8 +23,9 @@ style bottom_text2:
     size 42
     outlines [(3, "#000000a0", 0, 0)]
 
-style ct_text_add:
-    font "GenEiKoburiMin6-R.ttf"
+# style ct_text_add:
+#     # font "GenEiKoburiMin6-R.ttf"
+#     pass
 
 define bottom_text_t = "不....这是什么世界！？"
 define bottom_text_style = "bottom_text"
@@ -81,20 +82,21 @@ label elder_brother:
         time 0.15
         ease 1.2 alpha 0.3
 
-    $ ct_text3_t = "What... is this world!"#"ここはどんな世界ですか？"
-    $ ct_text3_delay = 0.6
-    $ ct_text3_speed = .02
+    $ ct_text3_t = "What is this world!?" # "これはどんな世界ですか？"
+    $ ct_text3_delay = 0.43
+    $ ct_text3_speed = .015
+    $ ct_text3_pre_len = 1
     $ ct_text3_style_t = "ct_text3_style_jp"
     $ bottom_text_t = "不....这是什么世界！？"
 
-    show ct_text3 at ZoomEaseIn(begin=2,end=0.5,time=1.2), AlphaIn(end=1,time=0.6), Transform:
+    show ct_text3 at ZoomEaseIn(begin=3,end=0.5,time=1), AlphaIn(end=1,time=0.3), Transform:
         # time 1.07
         # alpha 0.0
         pass
-    pause 0.70
+    pause 0.55
     show bottom_text at Transform:
         pass
-    with Dissolve(0.4) 
+    with Dissolve(0.2) 
     pause
     # pause
 
@@ -102,6 +104,8 @@ label elder_brother:
     hide bottom_text
     hide ct_text3
     with dissolve
+
+    $ ct_text3_pre_len = 1
 
     # pause
     

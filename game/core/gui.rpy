@@ -25,7 +25,7 @@ define config.check_conflicting_properties = True
 ## 界面中文本的颜色。
 
 ## 整个界面中使用的强调色，用于标记和突出显示文本。
-define gui.accent_color = '#cc0000'
+define gui.accent_color = '#fc2211'
 
 ## 当文本按钮既未被选中也未被悬停时使用的颜色。
 define gui.idle_color = '#888888'
@@ -362,14 +362,14 @@ define gui.nvl_name_xalign = 0.0
 ## 对话文本的坐标、宽度和对齐方式。
 define gui.nvl_text_xpos = 500
 define gui.nvl_text_ypos = 10
-define gui.nvl_text_width = 1135
+define gui.nvl_text_width = 1235
 define gui.nvl_text_xalign = 0.0
 define gui.nvl_text_height = None
 
 ## nvl_thought 文本（由 nvl_narrator 字符表示的文本）的位置，宽度和对齐方式。
 define gui.nvl_thought_xpos = 0
 define gui.nvl_thought_ypos = 0
-define gui.nvl_thought_width = 1180
+define gui.nvl_thought_width = 1380
 define gui.nvl_thought_xalign = 0.0
 define gui.nvl_thought_height = None
 

@@ -68,7 +68,7 @@ style rolling_text_style:
     # yoffset 500
     yalign 0.0
     xalign 0.5
-    size 47
+    size 48
     outlines [(2, "#000000a0", 0, 0)]
     # line_leading 5
     color "#fff"

@@ -17,6 +17,10 @@ label center_label_1:
         alpha 0.0
     return
 
+label hide_center_label_1:
+    hide ct_text3 onlayer explosion_under
+    return
+
 # 游戏在此开始。
 label hospital_two:
 
@@ -78,8 +82,10 @@ label hospital_two:
 
     teacher "The flames of war may destroy buildings, but they cannot destroy the culture within our hearts. Everything will be alright.
 \n\n战火可以摧毁建筑，但无法摧毁我们心中的文化。一切都会好的。"
-
+    # pause 0.1
+    # $ nvl_anime = False
     nvl clear
+    # with dissolve
 
    
     # play audio "audio/sfx/air_defense_warning.mp3" volume 0.4
@@ -90,7 +96,8 @@ label hospital_two:
 
 
     call explosion("center_label_1") from _call_explosion_1
-    hide ct_text3 onlayer explosion_under
+    # $ nvl_anime = True
+    # hide ct_text3 onlayer explosion_under
     show bg ruins3 at Transform:
         alpha 0.0
         ease 2 alpha 1.0

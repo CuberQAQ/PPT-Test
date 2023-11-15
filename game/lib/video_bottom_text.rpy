@@ -15,7 +15,7 @@ style video_bottom_text_style2:
 
 style video_bottom_text_vbox_style:
     xalign 0.5
-    yalign 0.92
+    yalign 0.82
     color "#fff"
 
 # Text(video_bottom_text_t, dynamic = True, style = "video_bottom_text_style", slow=True)
