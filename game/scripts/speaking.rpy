@@ -6,7 +6,7 @@ label speaking:
 
     scene bg white_house at img_wandering
 
-    call hide_black_trans() from _call_hide_black_trans_8 
+    call hide_black_trans()
     
 
     voice "audio/voice/narrator/speaking_1.mp3"
@@ -56,6 +56,6 @@ label speaking:
 \n\n我们都反对伤害平民的行为和违反国际法的做法，呼吁保护平民开展人道救援，防止出现更严重的人道主义灾难。" 
     nvl clear
 
-    call show_black_trans("Chapter 4  Hospital   医院") from _call_show_black_trans_6 
+    call show_black_trans("Chapter 4  Hospital   医院")
 
     jump hospital_two

@@ -21,7 +21,7 @@ label home:
 
     scene bg bg4 at img_wandering
     play music "audio/bgm/MerryChrismas.mp3"
-    # call hide_black_trans() from _call_hide_black_trans
+    # call hide_black_trans()
     # pause 0.5
     call hide_black_trans()
 

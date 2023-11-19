@@ -14,7 +14,7 @@ label hospital_one:
     scene bg mother at img_wandering with dissolve
    
     play music "audio/bgm/Fake Love.mp3"
-    call hide_black_trans() from _call_hide_black_trans_5 
+    call hide_black_trans()
     
     voice "audio/voice/narrator/hospital1_1.mp3"
     narrator "In the recent bombing, the younger brother was seriously injured. The elder brother and sister were slightly injured. After being rescued, they were sent to the hospital and were waiting for treatment. At this time, a young mother appeared at the crowded hospital entrance.
@@ -100,7 +100,7 @@ label hospital_one:
 \n\n太拥挤了，所有的伤员转移到另一位置！"
     nvl clear
 
-    call show_black_trans("Emergency   急救室") from _call_show_black_trans_4 
+    call show_black_trans("Emergency   急救室")
 
     jump emergency
     

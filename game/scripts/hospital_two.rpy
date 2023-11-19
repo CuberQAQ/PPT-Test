@@ -26,14 +26,14 @@ label hospital_two:
 
 
     scene bg nurse at LinearUp(1500, 0),ImgWandering(2.2, 1.7, 20) with dissolve
-    # call hide_black_trans() from _call_hide_black_trans_6
+    # call hide_black_trans()
     
     play music "audio/bgm/卒業.mp3"
 
 
 
     scene flare_mask onlayer flare
-    call hide_black_trans() from _call_hide_black_trans_7
+    call hide_black_trans()
 
 
     voice "audio/voice/narrator/hospital2_1.mp3"
@@ -109,7 +109,7 @@ label hospital_two:
 
 
 
-    call explosion("center_label_1") from _call_explosion_1
+    call explosion("center_label_1")
     # $ nvl_anime = True
     # hide ct_text3 onlayer explosion_under
     show bg ruins3 at Transform:
@@ -132,8 +132,8 @@ label hospital_two:
     hide ct_text onlayer on_explosion with dissolve
     stop sound
     
-    call show_black_trans("Ruins 废墟") from _call_show_black_trans_5 
-    call hide_explosion from _call_hide_explosion_1 
+    call show_black_trans("Ruins 废墟")
+    call hide_explosion
 
     jump elder_brother_en
 

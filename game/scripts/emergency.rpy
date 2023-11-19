@@ -9,7 +9,7 @@ label emergency:
     #scene bg emergency_and_corridor at img_wandering
     scene bg cannot_hold at img_wandering with dissolve 
     play music "audio/bgm/Tassel.mp3"
-    call hide_black_trans() from _call_hide_black_trans_3
+    call hide_black_trans()
 
 
     voice "audio/voice/narrator/emergency_1.mp3"
@@ -111,7 +111,7 @@ label emergency:
 \n\n对不起，我们走吧。"
     nvl clear
 
-    call show_black_trans("Chapter 3  Announcement   国际态度") from _call_show_black_trans_1
+    call show_black_trans("Chapter 3  Announcement   国际态度")
     
 
     jump speaking

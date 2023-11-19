@@ -25,7 +25,7 @@ label explosion(center_label=False, hide_center_label=False):
     
     pause 1.3
     if center_label:
-        call expression center_label from _call_expression
+        call expression center_label
     pause 1
     show white_bg_2 onlayer explosion_bg2:
         alpha 1.0
@@ -47,7 +47,7 @@ label explosion(center_label=False, hide_center_label=False):
     with None
     pause 1.0
     if hide_center_label:
-        call expression hide_center_label from _call_expression_1
+        call expression hide_center_label
     hide white_bg_2 onlayer explosion_bg2
     show snow onlayer particle at Transform:
         alpha 1.0

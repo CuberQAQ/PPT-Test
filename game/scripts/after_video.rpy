@@ -14,7 +14,7 @@ style text_widget_style:
 
 image text_widget = Text("Thank you!", style = "text_widget_style")
 label after_video:
-    # call hide_black_trans() from _call_hide_black_trans
+    # call hide_black_trans()
     stop music fadeout 2
     show black_bg with Dissolve(0.5)
     pause

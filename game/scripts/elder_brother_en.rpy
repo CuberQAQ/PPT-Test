@@ -45,11 +45,11 @@ label elder_brother_en:
 
     #TODO new img
     scene bg ruins1 at blood_gray_red, img_wandering with dissolve
-    call hide_black_trans() from _call_hide_black_trans_2 
+    call hide_black_trans()
 
     scene bg elder_brother_ruin at blood_gray_red, img_wandering with dissolve
 
-voice "audio/voice/narrator/ruins_1.mp3"
+    voice "audio/voice/narrator/ruins_1.mp3"
     narrator "As the smoke cleared, the brother held onto supplies and carried a candle.
 \n\n硝烟散去，哥哥抱着物资，拿着烛火。"
 
@@ -58,7 +58,7 @@ voice "audio/voice/narrator/ruins_1.mp3"
     # scene bg ruins2 at blood_gray_red, img_wandering with dissolve
 
     
-voice "audio/voice/narrator/ruins_2.mp3"
+    voice "audio/voice/narrator/ruins_2.mp3"
     narrator "He suppressed his emotions and, with a glimmer of hope, searched for his loved ones amidst the ruins of the hospital. Finally, he found his sister, barely clinging to life.
 \n\n他强忍住情绪，怀着一丝侥幸的心理，在医院的废墟中翻找他的亲人。他终于发现姐姐，姐姐奄奄一息。"
     
@@ -67,6 +67,7 @@ voice "audio/voice/narrator/ruins_2.mp3"
 
     # scene bg ruins3 at blood_gray_red, img_wandering with dissolve
 
+    voice "audio/voice/sister/ruins_1.mp3"
     sister "Hurry up... Find Kevin...
 \n\n快……找弟弟……"
 
@@ -76,7 +77,7 @@ voice "audio/voice/narrator/ruins_2.mp3"
     #TODO blood_grey_red
 
     
-voice "audio/voice/narrator/ruins_3.mp3"
+    voice "audio/voice/narrator/ruins_3.mp3"
     narrator "He fought back his grief and continued searching, stumbling and wiping away tears. Eventually, he came across his younger brother, trembling as he extended a trembling finger to check for any signs of life—there was nothing. He collapsed.
 \n\n哥哥忍住悲痛，踉踉跄跄地继续翻找，边翻找边擦眼泪。最后翻到了弟弟，他颤颤巍巍地伸出手指探了探弟弟的鼻息——什么也没有，他崩溃了。"
 
@@ -95,16 +96,23 @@ voice "audio/voice/narrator/ruins_3.mp3"
     $ ct_text3_style_t = "ct_text3_style_jp"
     $ bottom_text_t = "不....这是什么世界！？"
 
+    
+    # pause 1
+    voice "audio/voice/elder_brother/ruins_1.mp3"
+
     show ct_text3 at ZoomEaseIn(begin=0.05 ,end=0.5,time=1), AlphaIn(end=0.8,time=0.5), Transform:
         # time 1.07
         # alpha 0.0
         pass
     pause 0.55
+    voice sustain
     
     show bottom_text at Transform:
         alpha 0.8
         pass
+    
     with Dissolve(0.2) 
+    voice sustain
     pause
     # pause
 
@@ -118,14 +126,14 @@ voice "audio/voice/narrator/ruins_3.mp3"
     # pause
     
 
-voice "audio/voice/elder_brother/ruins_2.mp3"
+    voice "audio/voice/elder_brother/ruins_2.mp3"
     elder_brother "I have lost all my loved ones! They all perished in this raging war, one after another, leaving me behind...
 \n\n我失去了所有的亲人！他们都在这场战火中丧命，一个接一个地离我而去...."
     nvl clear
 
     scene bg crying_brother at blood_gray_red, img_wandering with dissolve
 
-voice "audio/voice/elder_brother/ruins_3.mp3"
+    voice "audio/voice/elder_brother/ruins_3.mp3"
     elder_brother "Oh, dear Allah! He is my last remaining family member... the very last one! He... he was such a lovely kid, always bringing joy to me with his singing, his smile so warm... But now, they are all gone. They have departed, leaving me in this bloody battlefield...
 \n\n哦，天啊！这是我最后一个家人..最后一个！他...他是那个最容易笑的人，他唱歌时总是让我开心，他的微笑是如此温暖...现在，他们都离开了。他们离开我留下了这血腥的战场..."
     nvl clear
@@ -138,11 +146,11 @@ voice "audio/voice/elder_brother/ruins_3.mp3"
     # pause
     
     # jump qiaolang
-    # call show_black_trans("Love and Peace 爱与和平") from _call_show_black_trans_2 
+    # call show_black_trans("Love and Peace 爱与和平")
 
     jump after_video
 
     # show ct_text at truecenter with dissolve 
-    # call show_black_trans("Chapter 1  Home   巴以冲突中的一家") from _call_show_black_trans
+    # call show_black_trans("Chapter 1  Home   巴以冲突中的一家")
 
     

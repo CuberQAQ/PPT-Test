@@ -45,7 +45,7 @@ label elder_brother_jp:
 
     #TODO new img
     scene bg ruins1 at blood_gray_red, img_wandering with dissolve
-    call hide_black_trans() from _call_hide_black_trans_2 
+    call hide_black_trans()
 
     scene bg elder_brother_ruin at blood_gray_red, img_wandering with dissolve
 
@@ -67,6 +67,7 @@ label elder_brother_jp:
 
     # scene bg ruins3 at blood_gray_red, img_wandering with dissolve
 
+    voice "audio/voice/sister/ruins_1.mp3"
     sister "Hurry up... Find Kevin...
 \n\n快……找弟弟……"
 
@@ -147,11 +148,11 @@ label elder_brother_jp:
     # pause
     
     # jump qiaolang
-    # call show_black_trans("Love and Peace 爱与和平") from _call_show_black_trans_2 
+    # call show_black_trans("Love and Peace 爱与和平")
 
     jump after_video
 
     # show ct_text at truecenter with dissolve 
-    # call show_black_trans("Chapter 1  Home   巴以冲突中的一家") from _call_show_black_trans
+    # call show_black_trans("Chapter 1  Home   巴以冲突中的一家")
 
     

@@ -3,7 +3,7 @@ image videoer movie = Movie(play="movies/introduction.webm")
 label before_video:
     
     show videoer movie with dissolve 
-    call hide_black_trans() from _call_hide_black_trans_1
+    call hide_black_trans()
 
     $ video_bottom_text_t = "The conflict between Palestine and Israel is a long-term confrontation,"
     $ video_bottom_text_t2 = "巴以冲突是巴勒斯坦和以色列之间的长期对抗，"
@@ -73,7 +73,7 @@ label before_video:
 
     hide videoer movie
     
-    call show_black_trans("Chapter 1  Home   家") from _call_show_black_trans
+    call show_black_trans("Chapter 1  Home   家")
 
 
     jump home

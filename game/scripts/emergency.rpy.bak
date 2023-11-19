@@ -94,7 +94,7 @@ label emergency:
 \n\n对不起，我们走吧。"
     nvl clear
 
-    call show_black_trans("Chapter 3  Announcement   国际态度") from _call_show_black_trans_1
+    call show_black_trans("Chapter 3  Announcement   国际态度")
     
 
     jump speaking
