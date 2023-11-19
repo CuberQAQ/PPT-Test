@@ -38,7 +38,7 @@ init python:
 image bottom_text = DynamicDisplayable(bottom_text_func)
 
 # 游戏在此开始。
-label elder_brother:
+label elder_brother_en:
 
     play music "audio/bgm/ninelie.mp3"
     pause 2.0

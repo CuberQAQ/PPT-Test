@@ -135,6 +135,6 @@ label hospital_two:
     call show_black_trans("Ruins 废墟") from _call_show_black_trans_5 
     call hide_explosion from _call_hide_explosion_1 
 
-    jump elder_brother
+    jump elder_brother_en
 
     # show ct_text at truecenter with dissolve 
