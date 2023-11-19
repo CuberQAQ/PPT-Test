@@ -25,7 +25,7 @@ label home:
     # pause 0.5
     call hide_black_trans() from _call_hide_black_trans_4
 
-
+    voice "audio/voice/narrator/home_1.mp3"
     narrator "Our story takes place in the Israeli-Palestinian conflict, with the last round of bombings occurring half a month ago. At this very moment, a surviving yet fragmented family is recolleting hope for their lives, as today marks the younger brother's birthday.
 \n\n我们的故事发生在巴以冲突中，上一轮的轰炸发生在半个月前，此时此刻，幸存而残缺的一家人又重拾生活的希望，今天是弟弟的生日。"
 
@@ -33,26 +33,36 @@ label home:
 
     scene bg home at img_wandering with dissolve
 
-    pause
+    pause 3
+
+    voice "audio/voice/elder_brother/home_1.mp3"
     elder_brother "Come here, my dear!
 \n\n快过来，我亲爱的家人！"
 
     nvl clear
+
+    voice "audio/voice/sister/home_1.mp3"
     sister "Happy birthday, Kevin!
 \n\n生日快乐，Kevin！"
 
     nvl clear
+
+    voice "audio/voice/elder_brother/home_2.mp3"
     elder_brother "Make a wish, in this difficult time.
 \n\n许个愿吧，在这艰难的时刻。"
 
 
     nvl clear
+
+    voice "audio/voice/little_brother/home_1.mp3"
     little_brother "If only Mom and Dad were here...
 \n\n如果爸爸妈妈也在就好了……"
 
     # $ renpy.display_menu(items, interact=True, screen='choice')
 
     nvl clear
+
+    voice "audio/voice/sister/home_2.mp3"
     sister "It will all turn around.
 \n\n一切都会好的。"
     nvl clear
@@ -66,11 +76,12 @@ label home:
 
 #     narrator """The bomb hit the home!
 # 炸弹袭击了这个家!"""
-    $ ct_text_t = "The bomb hit the home\n      炸弹袭击了这个家"
+    $ ct_text_t = "The bomb attacked the home\n      炸弹袭击了这个家"
     show ct_text onlayer on_explosion at alpha_in, Transform:
         time 1.0
         easein 6 zoom 0.8
-    
+    pause 1
+    voice "audio/voice/narrator/home_2.mp3"
 
     # nvl clear
 
