@@ -395,8 +395,8 @@ screen main_menu():
     # use navigation
     style_prefix "main_menu"
 
-    $ renpy.music.stop("music")
-    $ renpy.music.play("audio/bgm/DeathWaltz.flac", "music")
+    # $ renpy.music.stop("music")
+    # $ renpy.music.play("audio/bgm/DeathWaltz.flac", "music")
 
     text _("""The Glim of Candles 
 ＆

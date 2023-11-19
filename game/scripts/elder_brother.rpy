@@ -40,7 +40,7 @@ image bottom_text = DynamicDisplayable(bottom_text_func)
 # 游戏在此开始。
 label elder_brother:
 
-    play music "audio/bgm/ninelie.mp3"
+    play music "audio/bgm/ninelie2.mp3"
     pause 2.0
 
     #TODO new img
