@@ -36,11 +36,13 @@ label hospital_two:
     call hide_black_trans() from _call_hide_black_trans_7
 
 
+    voice "audio/voice/narrator/hospital2_1.mp3"
     narrator"Meanwhile, inside the hospital, nurses are bandaging other injured patients while the elder brother went out to search for supplies.
 \n\n与此同时，在医院里，护士在包扎其他伤员，哥哥外出寻找物资。"
 
     nvl clear
 
+    voice "audio/voice/narrator/hospital2_2.mp3"
     narrator """The sister’s teacher was bandaging one of the injured.
 \n\n姐姐的老师正在为一位伤员包扎。"""
 
@@ -48,11 +50,19 @@ label hospital_two:
 
     scene bg madam at img_wandering with dissolve
 
+    voice "audio/voice/teacher/hospital2_1.mp3"
+    teacher "Is there anyone who can lend me your hand?
+\n\n有谁能来搭把手？"
+
+    nvl clear
+
+    voice "audio/voice/sister/hospital2_1.mp3"
     sister "Madam, why you are here?
 \n\n女士,您怎么在这？"
 
     nvl clear
 
+    voice "audio/voice/teacher/hospital2_2.mp3"
     teacher "The school was also hit by an air raid.
 \n\n学校也遭遇了空袭。"
 
@@ -61,11 +71,13 @@ label hospital_two:
     # scene bg hospital2_3 at img_wandering with dissolve
     scene bg candle at ImgWandering(1.5, 1.0, 15)  with dissolve
 
+    voice "audio/voice/sister/hospital2_2.mp3"
     sister "What is this? Is the flame of civilization about to be extinguished?
 \n\n这算什么呢，文明的烛火要被熄灭了吗？"
 
     nvl clear
 
+    voice "audio/voice/teacher/hospital2_3.mp3"
     teacher "Even if the storm is fierce, this cluster of candles will continue to burn.
 \n\n即使风雨再大，这一簇烛火也会燃烧下去。"
 
@@ -73,6 +85,7 @@ label hospital_two:
 
     # scene bg hospital2_4 at img_wandering with dissolve
 
+    voice "audio/voice/sister/hospital2_3.mp3"
     sister "But, madam, we have already lost so much, can we truly recover?
 \n\n但是，女士，我们已经失去了那么多，真的能够恢复吗？"
 
@@ -80,6 +93,7 @@ label hospital_two:
 
     scene bg hospital_inside2 at img_wandering with dissolve
 
+    voice "audio/voice/teacher/hospital2_4.mp3"
     teacher "The flames of war may destroy buildings, but they cannot destroy the culture within our hearts. Everything will be alright.
 \n\n战火可以摧毁建筑，但无法摧毁我们心中的文化。一切都会好的。"
     # pause 0.1
