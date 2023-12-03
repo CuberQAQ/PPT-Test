@@ -3,14 +3,14 @@
     "google_play_key": null,
     "google_play_salt": null,
     "heap_size": "3",
-    "icon_name": "Candle and War",
+    "icon_name": "Candle Light",
     "include_pil": false,
     "include_sqlite": false,
     "layout": null,
-    "name": "Candle and War",
+    "name": "Candle Light",
     "numeric_version": 1,
     "orientation": "sensorLandscape",
-    "package": "com.cuberqaq.candleandwar",
+    "package": "com.cuberqaq.candlelight_jp",
     "permissions": [
         "VIBRATE",
         "INTERNET"
